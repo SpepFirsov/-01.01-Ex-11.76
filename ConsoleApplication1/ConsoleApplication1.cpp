@@ -1,11 +1,12 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char* argv[])
-
 {
+    setlocale(LC_ALL, "Russian");
     int arrayLen;
+    cout << "Введите длину массива:";
     cin >> arrayLen;
     int* array = new int[arrayLen];
     for (int i = 0;i < arrayLen;++i)
@@ -21,7 +22,7 @@ int main(int argc, char* argv[])
             pairCounter += 1;
         }
     }
-    cout << pairCounter << endl;
+    cout << "число чётных пар элементов массива:"<< pairCounter << endl;
     delete[] array;
     system("pause");
     return 0;
